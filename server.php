@@ -46,18 +46,17 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	$Password_hash = md5($password_1);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO accounts (username, email, Password_hash) 
+  	$query = "INSERT INTO accounts (Username, email, Password_hash) 
   			  VALUES('$username', '$email', '$Password_hash')";
   	mysqli_query($db, $query);
-  	$_SESSION['Username'] = $username;
-  	$_SESSION['success'] = "You are now logged in";
-  	header('location: index.php');
+    $query = "SELECT * FROM accounts WHERE Username='$username' AND Password_hash='$Password_hash'";
+    $results = mysqli_query($db, $query);
+    $_SESSION['username'] = $username;
+    $_SESSION['success'] = "You are now logged in";
+    header('location: index.php');
   }
 }
 
-// ... 
-
-// ... 
 
 // LOGIN USER
 if (isset($_POST['login_user'])) {

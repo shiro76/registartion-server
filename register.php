@@ -22,15 +22,15 @@
   	</div>
   	<div class="input-group">
   	  <label>Email</label>
-  	  <input type="email" name="email" value="<?php echo $email; ?>">
+  	  <input type="email" name="email" autocomplete="email" value="<?php echo $email; ?>">
   	</div>
   	<div class="input-group">
   	  <label>Mot de passe</label>
-  	  <input type="password" name="password_1">
+  	  <input type="password" name="password_1" autocomplete="new-password">
   	</div>
   	<div class="input-group">
   	  <label>Confirmer mot de passe</label>
-  	  <input type="password" name="password_2">
+  	  <input type="password" name="password_2" autocomplete="new-password">
   	</div>
   	<div class="input-group">
   	  <button type="submit" class="btn" name="reg_user">S'incrire</button>
