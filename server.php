@@ -52,7 +52,7 @@ if (isset($_POST['reg_user'])) {
     $query = "SELECT * FROM accounts WHERE Username='$username' AND Password_hash='$Password_hash'";
     $results = mysqli_query($db, $query);
     $_SESSION['username'] = $username;
-    $_SESSION['success'] = "You are now logged in";
+    $_SESSION['success'] = "Vous etes connecté";
     header('location: index.php');
   }
 }
@@ -76,10 +76,10 @@ if (isset($_POST['login_user'])) {
         $results = mysqli_query($db, $query);
         if (mysqli_num_rows($results) == 1) {
           $_SESSION['username'] = $username;
-          $_SESSION['success'] = "You are now logged in";
+          $_SESSION['success'] = "Vous etes connecté";
           header('location: index.php');
         }else {
-            array_push($errors, "Wrong Username/password combination");
+            array_push($errors, "nom D'utilisateur/mot de passe incorrect");
         }
     }
   }

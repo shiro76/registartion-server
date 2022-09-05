@@ -24,7 +24,7 @@
 </head>
 <body>
 <div class="header">
-	<h2>Home Page</h2>
+	<h2>Acceuil</h2>
 </div>
 <div class="content">
   	<!-- notification message -->
@@ -44,7 +44,7 @@
       echo "<script>alert(\"Compte crée/connecté!! Tu peu maintenant te connecter au jeu en executant le Client.exe\")</script>";
 
     if (isset($_SESSION['username'])) : ?>
-    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    	<p>Bienvenue <strong><?php echo $_SESSION['username']; ?></strong></p>
     	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
 </div>
